@@ -1,4 +1,9 @@
-/* Tag e globali e bootstrap */
+/* Globals & Roots */
+:root {
+  --customBlue: #1566c0;
+  --customYellow: #ffc107;
+}
+
 .row {
   --bs-gutter-x: 0rem;
 }
@@ -19,24 +24,20 @@ a:active {
   color: rgb(0, 55, 255) !important;
 }
 /* Variabili */
-:root {
-  --customBlue: #1566c0;
-  --warning: #ffc107;
-}
-.cb {
+.myBlue {
   color: var(--customBlue);
 }
-.wrn {
-  color: var(--warning);
+.myYellow {
+  color: var(--customYellow);
 }
 /* Font */
-.titoli {
+.custom-titles {
   font-family: 'Righteous', cursive;
   font-weight: 900;
 }
 
 /* Body */
-.p2shadow {
+.custom-shadow {
   -webkit-border-radius: 25px 25px 25px 25px;
   -moz-border-radius: 25px 25px 25px 25px;
   border-radius: 25px 25px 25px 25px;
@@ -44,8 +45,8 @@ a:active {
   box-shadow: 0px 8px 19px 3px rgba(0, 0, 0, 0.22);
 }
 
-/* Header */
-.hBg {
+/* Header + Hero -------------------------------- */
+.hero-img {
   background: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
     url(./media/header.jpg);
   height: 110vh;
@@ -66,47 +67,31 @@ a:active {
   left: 0%;
   width: 100%;
 }
-#titolo {
+#main-title {
   font-size: 500%;
 }
-.btn1 {
+.more-btn {
   border-radius: 0%;
   padding: 1.5% 15%;
-  border: 2px solid var(--warning);
+  border: 2px solid var(--customYellow);
 }
-.testoHeader {
+.hero-text {
   width: 50%;
 }
-@media screen and (max-width: 1124px) {
-  .testoHeader {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 703px) {
-  .testoHeader {
-    width: 100%;
-  }
-  .hBg {
-    background: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
-      url(./media/header.jpg);
-    height: 700px;
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-}
-.btn:hover {
-  background-color: rgb(0, 0, 0);
-  color: var(--warning);
-  border: 2px solid var(--warning);
+
+.more-btn:hover {
+  background-color: var(--customBlue);
+  color: var(--customYellow);
+  border: 2px solid var(--customYellow);
 }
 
-/* Paragrafo 1 */
-.p1h2 {
+/* END Header + Hero -------------------------------- */
+
+/* First Section ------------------------------ */
+.custom-h2-sec1 {
   max-width: 300px;
 }
-.p1p {
+.custom-p-sec1 {
   max-width: 800px;
 }
 
@@ -120,7 +105,7 @@ a:active {
     0px 0px 50px 0px rgba(0, 0, 0, 0.38);
   box-shadow: 0px 10px 13px -7px #000000, 0px 0px 50px 0px rgba(0, 0, 0, 0.38);
 }
-.card1bg {
+.background-4cards-1 {
   background: linear-gradient(
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0.4) 50%,
@@ -131,7 +116,7 @@ a:active {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.card2bg {
+.background-4cards-2 {
   background: linear-gradient(
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0.4) 50%,
@@ -142,7 +127,7 @@ a:active {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.card3bg {
+.background-4cards-3 {
   background: linear-gradient(
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0.4) 50%,
@@ -153,7 +138,7 @@ a:active {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.card4bg {
+.background-4cards-4 {
   background: linear-gradient(
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0.4) 50%,
@@ -164,50 +149,54 @@ a:active {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.cardLorem {
-  border-bottom: 3px solid var(--warning);
+.custom-border-yellow {
+  border-bottom: 3px solid var(--customYellow);
 }
 
-/* Paragrafo 2 */
-/* .p2box1{
-  width: 45%;
-}
-.p2box2{
-  width: 45%;
-} */
-.p2lilboxes {
+/* END First Section ------------------------------ */
+
+/* Second Section ------------------------------ */
+.custom-small-icons-div {
   width: 100px;
   height: 100px;
   padding-top: 30px;
   font-size: 250%;
 }
+/* END Second Section ------------------------------ */
 
-/* Paragrafo 3 */
-.p3boxes {
+/* Third Section ------------------------------ */
+.custom-eight-div {
   height: fit-content;
 }
+/* END Third Section ------------------------------ */
 
-/* Paragrafo 4 */
-.benefitsImg {
+/* Fourth Section ------------------------------ */
+.custom-imgs-sec4 {
   width: 300px;
   height: 300px;
   border-radius: 50%;
   padding: 1%;
   border: 4px solid var(--customBlue);
 }
+/* END Fourth Section ------------------------------ */
 
-/* Timeline */
-.btn2 {
+/* Fifth Section ------------------------------ */
+.custom-btn-subscribe {
   background-color: var(--customBlue);
+  border: none;
   border-radius: 0%;
   padding: 0.4% 3.5%;
+  transition: 1s;
 }
-.linedis {
+.custom-btn-subscribe:hover {
+  size: 110%;
+}
+.border-text-right {
   border-right: 4px solid var(--customBlue);
   width: calc(50% + 2px);
   position: relative;
 }
-.linedis::after {
+.border-text-right::after {
   content: '';
   position: absolute;
   width: 24px;
@@ -218,33 +207,13 @@ a:active {
   right: calc(0% - 14px);
   top: 0%;
 }
-@media screen and (max-width: 767px) {
-  .linedis {
-    border-right: none;
-    border-left: 4px solid var(--customBlue);
-    width: 100%;
-  }
-  .linedis::before {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    background-color: white;
-    border: 3px solid var(--customBlue);
-    border-radius: 50%;
-    left: calc(0% - 14px);
-    top: 0%;
-  }
-  .linedis::after {
-    content: none;
-  }
-}
-.linepar {
+
+.border-text-left {
   border-left: 4px solid var(--customBlue);
   width: calc(50% + 2px);
   position: relative;
 }
-.linepar::before {
+.border-text-left::before {
   content: '';
   position: absolute;
   width: 24px;
@@ -255,14 +224,10 @@ a:active {
   left: calc(0% - 14px);
   top: 0%;
 }
-@media screen and (max-width: 767px) {
-  .linepar {
-    width: 100%;
-  }
-}
+/* END Fifth Section ------------------------------ */
 
 /* Footer */
-.footBg {
+.background-footer {
   background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 1) 0%,
@@ -274,13 +239,13 @@ a:active {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.social {
+.icons-socials {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: calc(100% - 105px);
 }
-.darkfoot {
+.footer-shadow {
   background: rgb(0, 0, 0);
   background: linear-gradient(
     180deg,
